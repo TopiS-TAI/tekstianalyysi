@@ -2,12 +2,6 @@ from collections import Counter
 contents = None
 words = None
 
-def checkChars(text, search):
-    score = 0
-    for char in search:
-        score += text.count(char)
-    return score
-
 def check_words(words, search):
     lower_words = [word.lower() for word in words]
     score = 0
@@ -56,9 +50,6 @@ match option:
         for char in commonest:
             print(f'"{char[0]}": {char[1]} kappaletta.')
     case '5':
-        finchars = 'äö'
-        swechars = 'åäö'
-        nonechars = 'âãáàëêéèïîíìüûúùÿýñ'
         finwords = ['että', 'ei', 'mutta', 'kun', 'ovat', 'joka', 'jos', 'vaikka', 'olla', 'tämä', 'voida', 'saada']
         swewords = ['jag', 'du', 'han', 'det', 'vi', 'ni', 'en', 'ett']
         engwords = ['the', 'be', 'to', 'and', 'a', 'an', 'that', 'have']
